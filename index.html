@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chore Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Chore Tracker</h1>
+
+            <div class="notification is-primary" id="feedback"></div>
+
+            <img id="monsterImage" src="monsters/idle.gif" alt="Monster">
+
+            <div class="hit-points-bar">
+                <div id="hitPoints" class="hit-points"></div>
+                <span id="hitPointsPercentage" class="percentage">100%</span>
+            </div>
+
+            <table id="choreList" class="table">
+                <thead>
+                    <tr>
+                        <th>Done</th>
+                        <th>Chore</th>
+                        <th>Points</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="field">
+                <label class="label">Chore</label>
+                <div class="control">
+                    <input id="choreInput" class="input" type="text" placeholder="Chore name">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Points</label>
+                <div class="control">
+                    <input id="pointsInput" class="input" type="number" min="1" max="50" placeholder="Points (1-50)">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="addChoreButton" class="button is-link">Add Chore</button>
+                <button id="randomPointsButton" class="button is-warning">Random Points</button>
+                <button id="clearDataButton" class="button is-danger">Clear All Data</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
